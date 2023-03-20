@@ -1,0 +1,42 @@
+
+#include "stdafx.h"             
+
+// Locals
+#include "TTmpLoadComics.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+static TCHAR szP1[]	= _T("P1");
+static TCHAR szP2[]	= _T("P2");
+static TCHAR szP3[]	= _T("P3");
+
+IMPLEMENT_DYNCREATE(TTmpLoadComics, SqlRecord) 
+
+//-----------------------------------------------------------------------------
+TTmpLoadComics::TTmpLoadComics(BOOL bCallInit)
+	:
+	SqlRecord(GetStaticName())
+{
+	BindRecord();
+	if (bCallInit) Init();
+}
+
+//-----------------------------------------------------------------------------
+void TTmpLoadComics::BindRecord()
+{
+	BEGIN_BIND_DATA	();
+		BIND_DATA	(_NS_FLD("EntryId"),		f_EntryId);
+		BIND_DATA	(_NS_FLD("SubId"),			f_SubId);
+		BIND_DATA	(_NS_FLD("BoxNo"),			f_BoxNo);
+		BIND_DATA	(_NS_FLD("Item"),			f_Item);
+		BIND_DATA	(_NS_FLD("Description"),	f_Description);
+		BIND_DATA	(_NS_FLD("Collection"),		f_Collection);
+		BIND_DATA	(_NS_FLD("InvEntryDate"),	f_InvEntryDate);
+	END_BIND_DATA();
+}
+
+//-----------------------------------------------------------------------------
+LPCTSTR TTmpLoadComics::GetStaticName() { return _NS_TBL("CO_TmpLoadComics"); }

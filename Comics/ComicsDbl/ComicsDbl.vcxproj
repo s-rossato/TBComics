@@ -275,18 +275,28 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TBoxes.h" />
+    <ClInclude Include="TCollectionAdditionalColumns.h" />
     <ClInclude Include="TCollections.h" />
-<ClInclude Include="stdafx.h" />
+    <ClInclude Include="TLoadBoxAdditionalColumns.h" />
+    <ClInclude Include="TTmpLoadComics.h" />
+    <ClInclude Include="TTmpUnloadComics.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TCollections.cpp" />
-<ClCompile Include="ComicsDblinterface.cpp" />
+    <ClCompile Include="ComicsDblinterface.cpp" />
     <ClCompile Include="ComicsDbl.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TBoxes.cpp" />
+    <ClCompile Include="TCollectionAdditionalColumns.cpp" />
+    <ClCompile Include="TCollections.cpp" />
+    <ClCompile Include="TLoadBoxAdditionalColumns.cpp" />
+    <ClCompile Include="TTmpLoadComics.cpp" />
+    <ClCompile Include="TTmpUnloadComics.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="beginh.dex" />

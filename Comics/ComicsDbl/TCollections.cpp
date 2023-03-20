@@ -15,7 +15,7 @@ IMPLEMENT_DYNCREATE(TCollections, SqlRecord)
 TCollections::TCollections(BOOL bCallInit)
 	:
 	SqlRecord	(GetStaticName()),
-	f_Disabled(FALSE)
+	f_Disabled	(FALSE)
 {
 	f_Collection.SetUpperCase();
 
@@ -27,10 +27,10 @@ TCollections::TCollections(BOOL bCallInit)
 void TCollections::BindRecord()
 {
 	BEGIN_BIND_DATA	();
-		BIND_DATA(_NS_FLD("Collection"), f_Collection);
-		BIND_DATA(_NS_FLD("Description"), f_Description);
-		BIND_DATA(_NS_FLD("Notes"), f_Notes);
-		BIND_DATA(_NS_FLD("Disabled"), f_Disabled);
+		BIND_DATA	(_NS_FLD("Collection"),		f_Collection);
+		BIND_DATA	(_NS_FLD("Description"),	f_Description);
+		BIND_DATA	(_NS_FLD("Notes"),			f_Notes);
+		BIND_DATA	(_NS_FLD("Disabled"),		f_Disabled);
 		BIND_TB_GUID();
 	END_BIND_DATA();    
 }

@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DatabaseObjects version="1">
-    <Signature>Comics</Signature>
-    <Release>1</Release>
-    <Tables>
-        <Table namespace="Comics.Comics.ComicsDbl.Collections" mastertable="true">
-            <DocumentationInfo localizable_1="true">Collections master table</DocumentationInfo>
-            <Create release="1" createstep="1" />
-            <Columns>
-                <Column>
-                    <SchemaInfo localizable_1="true" type="String" defaultvalue="" length="10">Code</SchemaInfo>
-                    <DocumentationInfo localizable_1="true" mandatory="true">Collections code</DocumentationInfo>
-                </Column>
-                <Column>
-                    <SchemaInfo localizable_1="true" type="String" defaultvalue="" length="128">Description</SchemaInfo>
-                    <DocumentationInfo localizable_1="true">Collections description</DocumentationInfo>
-                </Column>
-            </Columns>
-            <PrimaryKey name="PK_Collections" type="NONCLUSTERED">
-                <Segments>Code</Segments>
-            </PrimaryKey>
-            <Indexes/>
-        </Table>
-    </Tables>
+	<Signature>Comics</Signature>
+	<Release>1</Release>
+	<Tables>
+	</Tables>
 </DatabaseObjects>

@@ -1,4 +1,4 @@
-if not exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[CO_Collections]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+﻿if not exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[CO_Collections]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
  BEGIN
 CREATE TABLE [dbo].[CO_Collections] (
     [Collection] [varchar] (20) NOT NULL,
