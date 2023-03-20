@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SalesModule producer="ComicsTest" localize="Comics module" edition="Professional">
+  <ShortNames>
+    <ShortName name="CMCS" />
+  </ShortNames>
+  <Application container="Applications" name="Comics">
+    <Module name="Comics" />
+  </Application>
+</SalesModule>

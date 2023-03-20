@@ -1,0 +1,10 @@
+{
+    "href": "M.Framework.TbGes.TbGes.IDD_MASTER_FRAME",
+    "id": "IDD_COLLECTIONS",
+    "name": "Collections",
+    "items": [
+        {
+            "href": "IDD_COLLECTIONS_VIEW"
+        }
+    ]
+}

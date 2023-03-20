@@ -1,0 +1,49 @@
+{
+  "id": "IDD_TD_COLLECTIONS_MAIN",
+  "type": "Tile",
+  "name": "MainData",
+  "text": "Collections document",
+  "child": true,
+  "items": [
+      {
+      "id": "IDC_COLLECTIONS_CODE",
+      "type": "Edit",
+      "controlClass": "StringEdit",
+      "controlCaption": "Code",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2,
+      "binding": {
+        "datasource": "Collections.Code"
+      },
+      "tabStop": true,
+      "width": 48,
+      "height": 12,
+      "autoHScroll": true,
+      "rows": 1,
+      "multiline": false
+    },
+    {
+      "id": "IDC_COLLECTIONS_DESCRI",
+      "type": "Edit",
+      "controlClass": "StringEdit",
+      "controlCaption": "Description",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 6,
+      "binding": {
+        "datasource": "Collections.Description"
+      },
+      "tabStop": true,
+      "width": 154,
+      "height": 36,
+      "autoVScroll": true,
+      "rows": 3,
+      "multiline": true,
+      "wantReturn": true
+    }
+    ],
+  "hasStaticArea": true,
+  "width": 654,
+  "height": 73
+}

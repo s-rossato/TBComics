@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DBTs xmlns:sl="urn:TBStringLoader">
+  <Master namespace="Comics.Comics.ComicsDocuments.Collections.Collections">
+    <Title localizable="true">Collections document</Title>
+    <Table namespace="Comics.Comics.ComicsDbl.CO_Collections">CO_Collections</Table>
+    <Slaves>
+    </Slaves>
+  </Master>
+</DBTs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentObjects>
+    <Documents>
+        <Document namespace="Comics.Comics.ComicsDocuments.Collections" localize="Collections document" classhierarchy="DCollections">
+            <InterfaceClass>ADMCollectionsObj</InterfaceClass>
+            <ViewModes>
+                <Mode name="Default" />
+                <Mode name="BackGround" />
+            </ViewModes>
+        </Document>
+    </Documents>
+</DocumentObjects>

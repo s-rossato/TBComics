@@ -1,0 +1,19 @@
+{
+  "id": "IDD_COLLECTIONS_VIEW",
+  "name": "Collections",
+  "type": "View",
+  "child": true,
+  "items": [
+    {
+      "id": "IDC_TG_COLLECTIONS",
+      "name": "Collections",
+      "type": "TileGroup",
+      "layoutType": 4/*VBOX*/,
+      "items": [
+        {
+          "href": "IDD_TD_COLLECTIONS_MAIN"
+        }
+      ]
+    }
+  ]
+}

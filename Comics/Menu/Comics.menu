@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppMenu>
+    <Application name="Comics" image_namespace="Image.Comics.Comics.Images.Comics.png">
+        <Title localizable="true">Comics TB Application</Title>
+        <Group name="Comics.Comics">
+            <Title localizable="true">Comics module</Title>
+            <Menu name="ComicsOptions">
+                <Title localizable="true">Comics Options</Title>
+                <Document>
+                    <Title localizable="true">Collections document</Title>
+                    <Object>Comics.Comics.ComicsDocuments.Collections</Object>
+                </Document>
+            </Menu>
+        </Group>
+    </Application>
+</AppMenu>
