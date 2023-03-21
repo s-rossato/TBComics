@@ -7,7 +7,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.BoxNo"
+        "datasource": "DBTBoxes.BoxNo"
       },
       "controlClass": "StringEdit",
       "height": 12,
@@ -19,7 +19,7 @@
     },
     {
       "binding": {
-        "datasource": "Boxs.IsClosed"
+        "datasource": "DBTBoxes.IsClosed"
       },
       "controlClass": "CheckBox",
       "text": "Is Closed  ",
@@ -33,7 +33,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.ClosingDate"
+        "datasource": "DBTBoxes.ClosingDate"
       },
       "controlClass": "DateEdit",
       "height": 12,
@@ -46,7 +46,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.CreationDate"
+        "datasource": "DBTBoxes.CreationDate"
       },
       "controlClass": "DateEdit",
       "controlCaption": "Creation Date",
@@ -60,7 +60,7 @@
     {
       "autoVScroll": true,
       "binding": {
-        "datasource": "Boxs.Notes"
+        "datasource": "DBTBoxes.Notes"
       },
       "controlClass": "StringEdit",
       "height": 23,
@@ -76,7 +76,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.Mail"
+        "datasource": "DBTBoxes.Mail"
       },
       "controlClass": "EmailAddressEdit",
       "controlCaption": "Mail",
@@ -89,7 +89,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.Telephone2"
+        "datasource": "DBTBoxes.Telephone2"
       },
       "controlClass": "StringEdit",
       "controlCaption": "Telephone2",
@@ -102,7 +102,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.Telephone1"
+        "datasource": "DBTBoxes.Telephone1"
       },
       "controlClass": "StringEdit",
       "height": 12,
@@ -115,7 +115,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.Discount"
+        "datasource": "DBTBoxes.Discount"
       },
       "controlClass": "PercentEdit",
       "controlCaption": "Discount",
@@ -128,7 +128,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.Name"
+        "datasource": "DBTBoxes.Name"
       },
       "controlClass": "StringEdit",
       "controlCaption": "Name",
@@ -141,7 +141,7 @@
     {
       "autoHScroll": true,
       "binding": {
-        "datasource": "Boxs.LastName"
+        "datasource": "DBTBoxes.LastName"
       },
       "controlClass": "StringEdit",
       "controlCaption": "LastName",

@@ -5,16 +5,15 @@
   "text": "Detail",
   "size": "AutoFill",
   "items": [
-    {
+  {
       "id": "IDC_BOXES_DETAIL",
       "type": "BodyEdit",
       "name": "Detail",
       "text": "Detail",
       "binding": {
-        "datasource": "BoxesDetails"
+        "datasource": "DBTBoxCollections"
       },
       "items": [
-
         {
           "type": "ColTitle",
           "controlClass": "StringEdit",
@@ -24,18 +23,6 @@
           "binding": {
             "datasource": "Collection"
           }
-        },
-        {
-          "type": "ColTitle",
-          "controlClass": "StringStatic",
-          "id": "IDC_BOX_COLLECTIONS_COLLECTION_DESCRI",
-          "text": "Descrizione Collection",
-          "name": "CollectionDescription",
-          "binding": {
-            "datasource": "HKLCollections.Description"
-          },
-          "chars": 64,
-          "rows": 2
         },
         {
           "type": "ColTitle",

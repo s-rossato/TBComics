@@ -30,6 +30,8 @@ TBoxes::TBoxes(BOOL bCallInit)
 	SqlRecord(GetStaticName()),
 	f_IsClosed(FALSE)
 {
+	f_BoxNo.SetUpperCase();
+
 	BindRecord();
 	if (bCallInit) Init();
 }
