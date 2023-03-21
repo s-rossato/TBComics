@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <Comics\ComicsComponents\ADMBoxs.h>
+#include <Comics\ComicsComponents\ADMBoxes.h>
 
 #include "beginh.dex"
 
@@ -9,16 +9,16 @@ class TBoxes;
 class TBoxCollections;
 
 //////////////////////////////////////////////////////////////////////////////
-//             class DBTBoxs definition
+//             class DBTBoxes definition
 //////////////////////////////////////////////////////////////////////////////
 //
 //----------------------------------------------------------------------------
-class TB_EXPORT DBTBoxs : public DBTMaster
+class TB_EXPORT DBTBoxes : public DBTMaster
 { 
-	DECLARE_DYNAMIC (DBTBoxs)
+	DECLARE_DYNAMIC (DBTBoxes)
 
 public:
-	DBTBoxs (CRuntimeClass*, CAbstractFormDoc*);
+	DBTBoxes (CRuntimeClass*, CAbstractFormDoc*);
 
 public:
 	TBoxes* GetBoxes () const { return (TBoxes*) GetRecord(); }
@@ -36,21 +36,20 @@ protected:
 };
 
 //////////////////////////////////////////////////////////////////////////////
-//             class DBTBoxsDetails definition
+//             class DBTBoxesDetails definition
 //////////////////////////////////////////////////////////////////////////////
 //
 //----------------------------------------------------------------------------
-class TB_EXPORT DBTBoxsDetails : public DBTSlaveBuffered
+class TB_EXPORT DBTBoxesDetails : public DBTSlaveBuffered
 { 
-	DECLARE_DYNAMIC (DBTBoxsDetails)
+	DECLARE_DYNAMIC (DBTBoxesDetails)
 
 public:
-	DBTBoxsDetails (CRuntimeClass*, CAbstractFormDoc*);
+	DBTBoxesDetails (CRuntimeClass*, CAbstractFormDoc*);
 
 public:
 	TBoxes* 			GetBoxes () 			const { return (TBoxes*)m_pDocument->GetMaster()->GetRecord(); }
-	TBoxCollections* GetDetail()	const { return (TBoxCollections*)GetRecord(); }
-	TBoxCollections* GetDetail(int nRow)	const { return (TBoxCollections*)GetRow(nRow); }
+	TBoxCollections*	GetDetail 				(int nRow)	const { return (TBoxCollections*) GetRow(nRow); }
 
 protected: 
 	virtual	void	OnDefineQuery		();
@@ -61,14 +60,14 @@ protected:
 };
 
 //=============================================================================
-class TB_EXPORT DBoxs : public CAbstractFormDoc, public ADMBoxsObj
+class TB_EXPORT DBoxes : public CAbstractFormDoc, public ADMBoxesObj
 {
-	DECLARE_DYNCREATE(DBoxs)
+	DECLARE_DYNCREATE(DBoxes)
 
 public:
-	DBoxs();
-	DBTBoxs*			m_pDBTBoxs;
-	DBTBoxsDetails*	m_pDBTDetail;
+	DBoxes();
+	DBTBoxes*			m_pDBTBoxes;
+	DBTBoxesDetails*	m_pDBTDetail;
 	
 public:
 	virtual	TBoxes*			GetBoxes	() 			const;

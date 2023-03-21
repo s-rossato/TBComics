@@ -1,7 +1,7 @@
 
 #include "stdafx.h"
 
-#include "DBoxs.h"  
+#include "DBoxes.h"  
 #include <Comics\ComicsDbl\TBoxes.h>
 
 
@@ -12,50 +12,47 @@ static char THIS_FILE[] = __FILE__;
 
 /////////////////////////////////////////////////////////////////////////////
 static TCHAR szParamID[] = _T("paramID");
-static TCHAR szParamID2[] = _T("paramID2");
 
 //////////////////////////////////////////////////////////////////////////////
-//             class DBTBoxs implementation
+//             class DBTBoxes implementation
 //////////////////////////////////////////////////////////////////////////////
 //
 //----------------------------------------------------------------------------
-IMPLEMENT_DYNAMIC (DBTBoxs, DBTMaster)
+IMPLEMENT_DYNAMIC (DBTBoxes, DBTMaster)
 
 //-----------------------------------------------------------------------------	
-DBTBoxs::DBTBoxs
+DBTBoxes::DBTBoxes
 	(
 		CRuntimeClass*		pClass, 
 		CAbstractFormDoc*	pDocument
 	)
 	:
-	DBTMaster (pClass, pDocument, _NS_DBT("Boxs"))
+	DBTMaster (pClass, pDocument, _NS_DBT("Boxes"))
 {
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxs::OnEnableControlsForFind ()
+void DBTBoxes::OnEnableControlsForFind ()
 {
 	GetBoxes ()->f_BoxNo.SetFindable();
-	GetBoxes ()->f_Name.SetFindable();
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxs::OnDisableControlsForEdit ()
+void DBTBoxes::OnDisableControlsForEdit ()
 {
 }
 
 //-----------------------------------------------------------------------------	
-void DBTBoxs::OnPrepareBrowser (SqlTable* pTable)
+void DBTBoxes::OnPrepareBrowser (SqlTable* pTable)
 {
 	TBoxes* pRec = (TBoxes*) pTable->GetRecord();
 
 	pTable->SelectAll();
 	pTable->AddSortColumn(pRec->f_BoxNo);
-	pTable->AddSortColumn(pRec->f_CreationDate);
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxs::OnDefineQuery ()
+void DBTBoxes::OnDefineQuery ()
 {
 	m_pTable->SelectAll			();
 	m_pTable->AddParam			(szParamID, GetBoxes()->f_BoxNo);
@@ -63,101 +60,96 @@ void DBTBoxs::OnDefineQuery ()
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxs::OnPrepareQuery ()
+void DBTBoxes::OnPrepareQuery ()
 {
 	m_pTable->SetParamValue (szParamID, GetBoxes()->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------
-BOOL DBTBoxs::OnCheckPrimaryKey	()
+BOOL DBTBoxes::OnCheckPrimaryKey	()
 {
 	return TRUE;
 }
 
 //////////////////////////////////////////////////////////////////////////////
-//             class DBTBoxsDetails implementation
+//             class DBTBoxesDetails implementation
 //////////////////////////////////////////////////////////////////////////////
 //
 //----------------------------------------------------------------------------
-IMPLEMENT_DYNAMIC (DBTBoxsDetails, DBTSlaveBuffered)
+IMPLEMENT_DYNAMIC (DBTBoxesDetails, DBTSlaveBuffered)
 
 //-----------------------------------------------------------------------------	
-DBTBoxsDetails::DBTBoxsDetails
+DBTBoxesDetails::DBTBoxesDetails
 	(
 		CRuntimeClass*		pClass, 
 		CAbstractFormDoc*	pDocument
 	)
 	:
-	DBTSlaveBuffered (pClass, pDocument, _NS_DBT("BoxCollections"), ALLOW_EMPTY_BODY, FALSE)
+	DBTSlaveBuffered (pClass, pDocument, _NS_DBT("BoxesDetails"), ALLOW_EMPTY_BODY, FALSE)
 {
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxsDetails::OnDefineQuery ()
+void DBTBoxesDetails::OnDefineQuery ()
 {
-	TBoxCollections* pRecord = GetDetail();
-
 	m_pTable->SelectAll			();
-	m_pTable->AddParam			(szParamID2, pRecord->f_BoxNo);
-	m_pTable->AddFilterColumn	(pRecord->f_BoxNo);
+	m_pTable->AddParam			(szParamID,GetBoxes()->f_BoxNo);
+	m_pTable->AddFilterColumn	(GetBoxes ()->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxsDetails::OnPrepareQuery ()
+void DBTBoxesDetails::OnPrepareQuery ()
 {
-	TBoxes* pRecord = GetBoxes();
-
-	m_pTable->SetParamValue(szParamID2, pRecord->f_BoxNo);
+	m_pTable->SetParamValue(szParamID, GetBoxes()->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------
-void DBTBoxsDetails::OnPreparePrimaryKey (int nRow, SqlRecord* pRec)
+void DBTBoxesDetails::OnPreparePrimaryKey (int nRow, SqlRecord* pRec)
 {
-	m_pTable->SetParamValue (szParamID, GetDetail()->f_BoxNo);
+	m_pTable->SetParamValue (szParamID, GetBoxes()->f_BoxNo);
 
 	ASSERT (pRec->IsKindOf(RUNTIME_CLASS(TBoxCollections)));
 	
 	TBoxCollections* pDetail= (TBoxCollections*) pRec;
   
-	pDetail->f_BoxNo	= GetDetail(nRow)->f_BoxNo;
+	pDetail->f_BoxNo = GetBoxes()->f_BoxNo;
 	// pDetail->f_Collection	= GetBoxes()->f_Collection;
-	// GetBoxes()->f_LastSubId += 1;
 }
 
 //-----------------------------------------------------------------------------
-BOOL DBTBoxsDetails::OnCheckPrimaryKey	()
+BOOL DBTBoxesDetails::OnCheckPrimaryKey	()
 {
 	return NULL;
 }
 
 //////////////////////////////////////////////////////////////////////////////
-//									DBoxs                          //
+//									DBoxes                          //
 //////////////////////////////////////////////////////////////////////////////
 //
 //-----------------------------------------------------------------------------
-IMPLEMENT_DYNCREATE(DBoxs, CAbstractFormDoc)
+IMPLEMENT_DYNCREATE(DBoxes, CAbstractFormDoc)
 
 //-----------------------------------------------------------------------------
-DBoxs::DBoxs()
+DBoxes::DBoxes()
 	:
-	m_pDBTBoxs	(NULL),
+	m_pDBTBoxes	(NULL),
 	m_pDBTDetail				(NULL)
 {
 }
 
 //-----------------------------------------------------------------------------
-TBoxes*			DBoxs::GetBoxes	()		 	const {return m_pDBTBoxs->GetBoxes(); }
-TBoxCollections*	DBoxs::GetDetail					(int nRow)  const {return m_pDBTDetail->GetDetail(nRow); }
+TBoxes*			DBoxes::GetBoxes	()		 	const {return m_pDBTBoxes->GetBoxes(); }
+TBoxCollections*	DBoxes::GetDetail					(int nRow)  const {return m_pDBTDetail->GetDetail(nRow); }
 
 //-----------------------------------------------------------------------------
-BOOL DBoxs::OnAttachData()
+BOOL DBoxes::OnAttachData()
 {              
-	SetFormTitle (_TB("Boxs document"));
+	SetFormTitle (_TB("Boxes document"));
 	
-	m_pDBTBoxs	= new DBTBoxs 		(RUNTIME_CLASS (TBoxes), this);
-	m_pDBTDetail				= new DBTBoxsDetails	(RUNTIME_CLASS (TBoxCollections), this);
+	m_pDBTBoxes	= new DBTBoxes 		(RUNTIME_CLASS (TBoxes), this);
+	m_pDBTDetail				= new DBTBoxesDetails	(RUNTIME_CLASS (TBoxCollections), this);
 	
-	m_pDBTBoxs->Attach(m_pDBTDetail);
+	m_pDBTBoxes->Attach(m_pDBTDetail);
 
-	return Attach (m_pDBTBoxs);
+	return Attach (m_pDBTBoxes);
 }

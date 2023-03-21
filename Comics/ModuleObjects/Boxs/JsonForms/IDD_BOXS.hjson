@@ -1,3 +1,0 @@
-#pragma once
-#include	<TbNameSolver\TBResourcesMap.h>
-#define	IDD_BOXS GET_IDD(IDD_BOXS, D.Comics.Comics.Boxs)

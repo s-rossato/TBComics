@@ -7,12 +7,12 @@ class TBoxes;
 class TBoxCollections;
 
 /////////////////////////////////////////////////////////////////////////////
-//							ADMBoxsObj
+//							ADMBoxesObj
 /////////////////////////////////////////////////////////////////////////////
 //
-class TB_EXPORT ADMBoxsObj : public ADMObj
+class TB_EXPORT ADMBoxesObj : public ADMObj
 {     
-	DECLARE_ADMCLASS(ADMBoxsObj)
+	DECLARE_ADMCLASS(ADMBoxesObj)
 		
 public:
 	virtual	ADMObj*				GetADM					()					= 0;

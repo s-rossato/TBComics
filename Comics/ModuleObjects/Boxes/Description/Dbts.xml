@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DBTs xmlns:sl="urn:TBStringLoader">
-  <Master namespace="Comics.Comics.ComicsDocuments.Boxs.Boxs">
-    <Title localizable="true">Boxs document</Title>
+  <Master namespace="Comics.Comics.ComicsDocuments.Boxes.Boxes">
+    <Title localizable="true">Boxes document</Title>
     <Table namespace="Comics.Comics.ComicsDbl.CO_Boxes">CO_Boxes</Table>
     <Slaves>
-      <SlaveBuffered namespace="Comics.Comics.ComicsDocuments.Boxs.BoxsDetails">
+      <SlaveBuffered namespace="Comics.Comics.ComicsDocuments.Boxes.BoxesDetails">
         <Title localizable="true">Details</Title>
         <Table namespace="Comics.Comics.ComicsDbl.CO_BoxesDetails">CO_BoxesDetails</Table>
       </SlaveBuffered>

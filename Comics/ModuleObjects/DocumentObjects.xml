@@ -8,8 +8,8 @@
                 <Mode name="BackGround" />
             </ViewModes>
         </Document>
-        <Document namespace="Comics.Comics.ComicsDocuments.Boxs" localize="Boxs document" classhierarchy="DBoxs">
-            <InterfaceClass>ADMBoxsObj</InterfaceClass>
+        <Document namespace="Comics.Comics.ComicsDocuments.Boxes" localize="Boxes document" classhierarchy="DBoxes">
+            <InterfaceClass>ADMBoxesObj</InterfaceClass>
             <ViewModes>
                 <Mode name="Default" />
                 <Mode name="BackGround" />

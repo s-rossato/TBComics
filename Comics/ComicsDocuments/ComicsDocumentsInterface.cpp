@@ -6,8 +6,8 @@
 
 #include "DCollections.h"
 #include "UICollections.hjson"
-#include "DBoxs.h"
-#include "UIBoxs.hjson"
+#include "DBoxes.h"
+#include "UIBoxes.hjson"
 #ifdef _DEBUG
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
@@ -43,9 +43,9 @@ BEGIN_ADDON_INTERFACE()
 		REGISTER_MASTER_JSON_TEMPLATE(szDefaultViewMode,	DCollections,	IDD_COLLECTIONS)
 		REGISTER_BKGROUND_TEMPLATE	(szBackgroundViewMode,	DCollections)
 	END_DOCUMENT ()
-	BEGIN_DOCUMENT (_NS_DOC("Boxs"), TPL_NO_PROTECTION)
-		REGISTER_MASTER_JSON_TEMPLATE(szDefaultViewMode,	DBoxs,	IDD_BOXS)
-		REGISTER_BKGROUND_TEMPLATE	(szBackgroundViewMode,	DBoxs)
+	BEGIN_DOCUMENT (_NS_DOC("Boxes"), TPL_NO_PROTECTION)
+		REGISTER_MASTER_JSON_TEMPLATE(szDefaultViewMode,	DBoxes,	IDD_BOXES)
+		REGISTER_BKGROUND_TEMPLATE	(szBackgroundViewMode,	DBoxes)
 	END_DOCUMENT ()
 END_TEMPLATE()
 

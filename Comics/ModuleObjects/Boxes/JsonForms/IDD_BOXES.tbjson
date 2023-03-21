@@ -1,10 +1,10 @@
 {
     "href": "M.Framework.TbGes.TbGes.IDD_MASTER_FRAME",
-    "id": "IDD_BOXS",
-    "name": "Boxs",
+    "id": "IDD_BOXES",
+    "name": "Boxes",
     "items": [
         {
-            "href": "IDD_BOXS_VIEW"
+            "href": "IDD_BOXES_VIEW"
         }
     ]
 }

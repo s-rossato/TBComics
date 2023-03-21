@@ -1,0 +1,6 @@
+#pragma once
+#include	<TbNameSolver\TBResourcesMap.h>
+#include	<Comics\ModuleObjects\Boxes\JsonForms\IDD_BOXES.hjson>
+#include	<Comics\ModuleObjects\Boxes\JsonForms\IDD_BOXES_VIEW.hjson>
+#include	<Comics\ModuleObjects\Boxes\JsonForms\IDD_TD_BOXES_MAIN.hjson>
+#include	<Comics\ModuleObjects\Boxes\JsonForms\IDD_TD_BOXES_DETAIL.hjson>

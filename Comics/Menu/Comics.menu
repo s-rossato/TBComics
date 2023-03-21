@@ -11,8 +11,8 @@
                     <Object>Comics.Comics.ComicsDocuments.Collections</Object>
                 </Document>
                 <Document>
-                    <Title localizable="true">Boxs document</Title>
-                    <Object>Comics.Comics.ComicsDocuments.Boxs</Object>
+                    <Title localizable="true">Boxes document</Title>
+                    <Object>Comics.Comics.ComicsDocuments.Boxes</Object>
                 </Document>
             </Menu>
         </Group>

@@ -275,13 +275,13 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DBoxs.h" />
-<ClInclude Include="DCollections.h" />
+    <ClInclude Include="DBoxes.h" />
+    <ClInclude Include="DCollections.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DBoxs.cpp" />
-<ClCompile Include="DCollections.cpp" />
+    <ClCompile Include="DBoxes.cpp" />
+    <ClCompile Include="DCollections.cpp" />
     <ClCompile Include="ComicsDocumentsinterface.cpp" />
     <ClCompile Include="ComicsDocuments.cpp" />
     <ClCompile Include="stdafx.cpp">

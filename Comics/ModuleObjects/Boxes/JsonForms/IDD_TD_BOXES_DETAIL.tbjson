@@ -1,20 +1,20 @@
 {
-  "id": "IDD_TD_BOXS_DETAIL",
+  "id": "IDD_TD_BOXES_DETAIL",
   "type": "Tile",
   "name": "Detail",
   "text": "Detail",
   "size": "AutoFill",
   "items": [
     {
-      "id": "IDC_BOXS_DETAIL",
+      "id": "IDC_BOXES_DETAIL",
       "type": "BodyEdit",
       "name": "Detail",
       "text": "Detail",
       "binding": {
-        "datasource": "BoxCollections"
+        "datasource": "BoxesDetails"
       },
       "items": [
-	  
+
         {
           "type": "ColTitle",
           "controlClass": "StringEdit",
@@ -127,7 +127,7 @@
             "datasource": "Notes"
           }
         }
-            ],
+      ],
       "width": 654,
       "height": 171,
       "clipChildren": true,

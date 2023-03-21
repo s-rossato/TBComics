@@ -3,6 +3,6 @@
   <Version>1</Version>
   <MaxDocuments>10</MaxDocuments>
   <MaxDimension>100</MaxDimension>
-  <DataUrl>Boxs.xml</DataUrl>
-  <EnvelopeClass extension="" localizable="true">Boxs</EnvelopeClass>
+  <DataUrl>Boxes.xml</DataUrl>
+  <EnvelopeClass extension="" localizable="true">Boxes</EnvelopeClass>
 </Document>

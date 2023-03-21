@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MainExternalReferences>
-  <DBT namespace="Comics.Comics.ComicsDocuments.Boxs.Boxs">
+  <DBT namespace="Comics.Comics.ComicsDocuments.Boxes.Boxes">
     <Export>1</Export>
     <ExternalReferences>
     </ExternalReferences>

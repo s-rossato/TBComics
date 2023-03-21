@@ -1,9 +1,9 @@
 {
-  "id": "IDD_TD_BOXS_MAIN",
+  "id": "IDD_TD_BOXES_MAIN",
   "type": "Tile",
   "name": "MainData",
-  "text": "Boxs document",
-  "items": [	
+  "text": "Boxes document",
+  "items": [
     {
       "autoHScroll": true,
       "binding": {
@@ -151,8 +151,8 @@
       "width": 265,
       "anchor": "COL1"
     }
-	
-    ],
+
+  ],
   "hasStaticArea": true,
   "height": 73,
   "width": 654

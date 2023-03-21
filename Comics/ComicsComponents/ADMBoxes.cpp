@@ -5,7 +5,7 @@
 #include <Comics\ComicsDbl\TBoxes.h>
 
 // local declaration
-#include "ADMBoxs.h" 
+#include "ADMBoxes.h" 
 
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -16,4 +16,4 @@ static char THIS_FILE[] = __FILE__;
 //								### ADM ###					
 /////////////////////////////////////////////////////////////////////////////
 //
-IMPLEMENT_ADMCLASS(ADMBoxsObj)
+IMPLEMENT_ADMCLASS(ADMBoxesObj)
