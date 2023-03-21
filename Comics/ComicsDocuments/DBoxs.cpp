@@ -12,6 +12,7 @@ static char THIS_FILE[] = __FILE__;
 
 /////////////////////////////////////////////////////////////////////////////
 static TCHAR szParamID[] = _T("paramID");
+static TCHAR szParamID2[] = _T("paramID2");
 
 //////////////////////////////////////////////////////////////////////////////
 //             class DBTBoxs implementation
@@ -87,22 +88,26 @@ DBTBoxsDetails::DBTBoxsDetails
 		CAbstractFormDoc*	pDocument
 	)
 	:
-	DBTSlaveBuffered (pClass, pDocument, _NS_DBT("BoxsDetails"), ALLOW_EMPTY_BODY, FALSE)
+	DBTSlaveBuffered (pClass, pDocument, _NS_DBT("BoxCollections"), ALLOW_EMPTY_BODY, FALSE)
 {
 }
 
 //-----------------------------------------------------------------------------
 void DBTBoxsDetails::OnDefineQuery ()
 {
+	TBoxCollections* pRecord = GetDetail();
+
 	m_pTable->SelectAll			();
-	m_pTable->AddParam			(szParamID, GetDetail()->f_BoxNo);
-	m_pTable->AddFilterColumn	(GetDetail()->f_BoxNo);
+	m_pTable->AddParam			(szParamID2, pRecord->f_BoxNo);
+	m_pTable->AddFilterColumn	(pRecord->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------
 void DBTBoxsDetails::OnPrepareQuery ()
 {
-	m_pTable->SetParamValue(szParamID, GetDetail()->f_BoxNo);
+	TBoxes* pRecord = GetBoxes();
+
+	m_pTable->SetParamValue(szParamID2, pRecord->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------

@@ -11,7 +11,7 @@
       "name": "Detail",
       "text": "Detail",
       "binding": {
-        "datasource": "DBTBoxCollections"
+        "datasource": "BoxCollections"
       },
       "items": [
 	  
@@ -22,11 +22,7 @@
           "text": "Collection",
           "name": "Collection",
           "binding": {
-            "datasource": "Collection",
-            "hotLink": "HKLCollections",
-            "hotLinkNS": "Comics.Comics.Dbl.Collections",
-            "mustExistData": false,
-            "enableAddOnFly": true
+            "datasource": "Collection"
           }
         },
         {
