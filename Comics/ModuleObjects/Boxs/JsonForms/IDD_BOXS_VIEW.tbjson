@@ -1,0 +1,22 @@
+{
+  "id": "IDD_BOXS_VIEW",
+  "name": "Boxs",
+  "type": "View",
+  "child": true,
+  "items": [
+    {
+      "id": "IDC_TG_BOXS",
+      "name": "Boxs",
+      "type": "TileGroup",
+      "layoutType": 4/*VBOX*/,
+      "items": [
+        {
+          "href": "IDD_TD_BOXS_MAIN"
+        },
+        {
+          "href": "IDD_TD_BOXS_DETAIL"
+        }
+      ]
+    }
+  ]
+}

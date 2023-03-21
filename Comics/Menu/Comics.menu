@@ -10,6 +10,10 @@
                     <Title localizable="true">Collections document</Title>
                     <Object>Comics.Comics.ComicsDocuments.Collections</Object>
                 </Document>
+                <Document>
+                    <Title localizable="true">Boxs document</Title>
+                    <Object>Comics.Comics.ComicsDocuments.Boxs</Object>
+                </Document>
             </Menu>
         </Group>
     </Application>

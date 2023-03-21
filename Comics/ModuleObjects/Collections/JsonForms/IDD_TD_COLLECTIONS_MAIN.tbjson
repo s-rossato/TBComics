@@ -5,42 +5,69 @@
   "text": "Collections document",
   "child": true,
   "items": [
-      {
-      "id": "IDC_COLLECTIONS_CODE",
+  {
+      "id": "IDC_COLLECTIONS_COLLECTION",
       "type": "Edit",
-      "controlClass": "StringEdit",
-      "controlCaption": "Code",
-      "anchor": "COL1",
-      "captionSize": 3,
-      "controlSize": 2,
-      "binding": {
-        "datasource": "Collections.Code"
-      },
-      "tabStop": true,
-      "width": 48,
+      "x": 7,
+      "y": 19,
+      "width": 93,
       "height": 12,
+      "anchor": "COL1",
       "autoHScroll": true,
-      "rows": 1,
-      "multiline": false
+      "controlClass": "StringEdit",
+      "controlCaption": "Collection",
+      "binding": {
+        "datasource": "Collections.Collection"
+      }
     },
     {
-      "id": "IDC_COLLECTIONS_DESCRI",
+      "id": "IDC_COLLECTIONS_DESCRIPTION",
       "type": "Edit",
+      "x": 108,
+      "y": 19,
+      "width": 300,
+      "height": 12,
+      "anchor": "COL1",
+      "autoHScroll": true,
       "controlClass": "StringEdit",
       "controlCaption": "Description",
-      "anchor": "COL1",
-      "captionSize": 3,
-      "controlSize": 6,
       "binding": {
         "datasource": "Collections.Description"
-      },
-      "tabStop": true,
-      "width": 154,
-      "height": 36,
+      }
+    },
+    {
+      "id": "IDC_COLLECTIONS_NOTES",
+      "type": "Edit",
+      "x": 7,
+      "y": 66,
+      "width": 300,
+      "height": 32,
+      "anchor": "COL1",
+      "controlCaption": "Notes",
+      "vScroll": true,
       "autoVScroll": true,
-      "rows": 3,
+      "wantReturn": true,
       "multiline": true,
-      "wantReturn": true
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "Collections.Notes"
+      }
+    },
+    {
+      "id": "IDC_COLLECTIONS_DISABLED",
+      "type": "Check",
+      "x": 350,
+      "y": 21,
+      "width": 120,
+      "height": 8,
+      "anchor": "IDC_COLLECTIONS_COLLECTION",
+      "tabStop": false,
+      "auto": true,
+      "controlClass": "CheckBox",
+      "text": "Disabled",
+      "binding": {
+        "datasource": "Collections.Disabled"
+      }
     }
     ],
   "hasStaticArea": true,

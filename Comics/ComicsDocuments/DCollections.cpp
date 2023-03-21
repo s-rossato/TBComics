@@ -57,7 +57,7 @@ void DBTCollections::OnPrepareBrowser (SqlTable* pTable)
 void DBTCollections::OnDefineQuery ()
 {
 	m_pTable->SelectAll			();
-	m_pTable->AddParam			(szParamCode,GetCollections ()->f_Collection);
+	m_pTable->AddParam(szParamCode, GetCollections()->f_Collection);
 	m_pTable->AddFilterColumn	(GetCollections ()->f_Collection);
 }
 
