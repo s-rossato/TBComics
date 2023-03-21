@@ -95,26 +95,26 @@ DBTBoxsDetails::DBTBoxsDetails
 void DBTBoxsDetails::OnDefineQuery ()
 {
 	m_pTable->SelectAll			();
-	m_pTable->AddParam			(szParamID,GetBoxes()->f_BoxNo);
-	m_pTable->AddFilterColumn	(GetBoxes ()->f_BoxNo);
+	m_pTable->AddParam			(szParamID, GetDetail()->f_BoxNo);
+	m_pTable->AddFilterColumn	(GetDetail()->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------
 void DBTBoxsDetails::OnPrepareQuery ()
 {
-	m_pTable->SetParamValue(szParamID, GetBoxes()->f_BoxNo);
+	m_pTable->SetParamValue(szParamID, GetDetail()->f_BoxNo);
 }
 
 //-----------------------------------------------------------------------------
 void DBTBoxsDetails::OnPreparePrimaryKey (int nRow, SqlRecord* pRec)
 {
-	m_pTable->SetParamValue (szParamID, GetBoxes()->f_BoxNo);
+	m_pTable->SetParamValue (szParamID, GetDetail()->f_BoxNo);
 
 	ASSERT (pRec->IsKindOf(RUNTIME_CLASS(TBoxCollections)));
 	
 	TBoxCollections* pDetail= (TBoxCollections*) pRec;
   
-	pDetail->f_BoxNo	= GetBoxes()->f_BoxNo;
+	pDetail->f_BoxNo	= GetDetail(nRow)->f_BoxNo;
 	// pDetail->f_Collection	= GetBoxes()->f_Collection;
 	// GetBoxes()->f_LastSubId += 1;
 }
@@ -142,7 +142,7 @@ DBoxs::DBoxs()
 
 //-----------------------------------------------------------------------------
 TBoxes*			DBoxs::GetBoxes	()		 	const {return m_pDBTBoxs->GetBoxes(); }
-TBoxesDetails*	DBoxs::GetDetail					(int nRow)  const {return m_pDBTDetail->GetDetail(nRow); }
+TBoxCollections*	DBoxs::GetDetail					(int nRow)  const {return m_pDBTDetail->GetDetail(nRow); }
 
 //-----------------------------------------------------------------------------
 BOOL DBoxs::OnAttachData()

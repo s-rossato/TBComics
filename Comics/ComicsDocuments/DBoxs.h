@@ -6,7 +6,7 @@
 #include "beginh.dex"
 
 class TBoxes;
-class TBoxesDetails;
+class TBoxCollections;
 
 //////////////////////////////////////////////////////////////////////////////
 //             class DBTBoxs definition
@@ -49,7 +49,8 @@ public:
 
 public:
 	TBoxes* 			GetBoxes () 			const { return (TBoxes*)m_pDocument->GetMaster()->GetRecord(); }
-	TBoxesDetails*	GetDetail 				(int nRow)	const { return (TBoxesDetails*) GetRow(nRow); }
+	TBoxCollections* GetDetail()	const { return (TBoxCollections*)GetRecord(); }
+	TBoxCollections* GetDetail(int nRow)	const { return (TBoxCollections*)GetRow(nRow); }
 
 protected: 
 	virtual	void	OnDefineQuery		();
@@ -71,7 +72,7 @@ public:
 	
 public:
 	virtual	TBoxes*			GetBoxes	() 			const;
-	virtual	TBoxesDetails*	GetDetail				(int nRow)	const;
+	virtual	TBoxCollections*	GetDetail				(int nRow)	const;
                        
 	// ADM Interface
 	virtual	ADMObj*		GetADM		()	{ return this; }
